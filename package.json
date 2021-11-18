@@ -1,12 +1,8 @@
 {
   "name": "fast-learn",
   "version": "0.0.1",
-  "description": "fast learn tools powered by sam",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
 }
