@@ -1,27 +1,28 @@
+# Getting Started
 
-安装：
+## 安装：
 
 ```bash
-npm install -g @fast-learn/core
-# OR
-yarn global add @fast-learn/core
+npm install -g fast-learn
 ```
 
-创建项目
+## 创建项目
+
+项目/组件初始化
 
 ```bash
-fast-learn init 
+fast-learn init
 ```
 
-发布项目
+强制清空当前文件夹
 
 ```bash
-fast-learn publish
+fast-learn init --force
 ```
 
 ## More
 
-清空缓存：
+清空本地缓存：
 
 ```bash
 fast-learn clean
@@ -33,7 +34,7 @@ DEBUG 模式：
 fast-learn --debug
 ```
 
-指定本地包：
+调试本地包：
 
 ```bash
 fast-learn init --packagePath /Users/sam/Desktop/fast-learn/packages/init/

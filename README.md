@@ -1,13 +1,12 @@
+# Getting Started
 
-## Getting Started
-
-### 安装：
+## 安装：
 
 ```bash
-npm install -g @fast-learn/core
+npm install -g fast-learn
 ```
 
-### 创建项目
+## 创建项目
 
 项目/组件初始化
 
@@ -20,33 +19,6 @@ fast-learn init
 ```bash
 fast-learn init --force
 ```
-
-### 发布项目
-
-发布项目/组件
-
-```bash
-fast-learn publish
-```
-
-强制更新所有缓存
-
-```bash
-fast-learn publish --force
-```
-
-正式发布
-
-```bash
-fast-learn publish --prod
-```
-
-手动指定build命令
-
-```bash
-fast-learn publish --buildCmd "npm run build:test"
-```
-
 
 ## More
 
