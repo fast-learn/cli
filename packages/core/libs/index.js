@@ -49,7 +49,7 @@ function registerCommand() {
     .option('--force', '覆盖当前路径文件（谨慎使用）')
     .action(async (type, { packagePath, force }) => {
       const packageName = '@fast-learn/init'
-      const packageVersion = '1.0.0'
+      const packageVersion = '0.0.2'
       await execCommand(
         { packagePath, packageName, packageVersion },
         { type, force }
@@ -245,18 +245,17 @@ async function prepare() {
 
 async function checkGlobalUpdate() {
   log.verbose('检查 fast-learn 最新版本')
-  // fast-learn/core 没有发布上线 检查暂时没做处理
-  // const currentVersion = packageConfig.version
-  // const lastVersion = await npm.getNpmLatestSemverVersion(
-  //   NPM_NAME,
-  //   currentVersion
-  // )
-  // if (lastVersion && semver.gt(lastVersion, currentVersion)) {
-  //   log.warn(
-  //     colors.yellow(`请手动更新 ${NPM_NAME}，当前版本：${packageConfig.version}，最新版本：${lastVersion}
-  //               更新命令： npm install -g ${NPM_NAME}`)
-  //   )
-  // }
+  const currentVersion = packageConfig.version
+  const lastVersion = await npm.getNpmLatestSemverVersion(
+    NPM_NAME,
+    currentVersion
+  )
+  if (lastVersion && semver.gt(lastVersion, currentVersion)) {
+    log.warn(
+      colors.yellow(`请手动更新 ${NPM_NAME}，当前版本：${packageConfig.version}，最新版本：${lastVersion}
+                更新命令： npm install -g ${NPM_NAME}`)
+    )
+  }
 }
 
 function checkEnv() {
